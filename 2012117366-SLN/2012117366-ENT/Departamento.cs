@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2012117366_CON
+namespace _2012117366_ENT
 {
-    class Program
+    public class Departamento
     {
-        static void Main(string[] args)
-        {
-            
-        }
+        public int departmaentoid { get; set; }
+        
+
+
+
+
+
+
+
     }
 }
