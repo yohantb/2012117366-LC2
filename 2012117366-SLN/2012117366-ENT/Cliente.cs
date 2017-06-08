@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,13 +8,20 @@ using System.Threading.Tasks;
 namespace _2012117366_ENT
 {
     public class Cliente
-    
     {
-        public int clienteid { get; set; }
-        public string nombrecli { get; set; }
-        public string Apecli { get; set; }
-        public int Edadcli { get; set; }
+        public int ClienteID { get; set; }
 
+        public ICollection<Evaluacion> Evaluacion { get; set; }
+        public int EvaluacionID { get; set; }
+
+        public ICollection<Venta> Venta { get; set; }
+        public int VentaID { get; set; }
+
+        public Cliente()
+        {
+            Evaluacion = new Collection<Evaluacion>();
+            Venta = new Collection<Venta>();
+        }
 
 
 

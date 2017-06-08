@@ -1,20 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace _2012117366_ENT
 {
-   public  class Provincia : Departamento
+    public class Provincia
     {
-        public int Provinciaid { get; set; }
+        public int ProvinciaID { get; set; }
+
+        public string CadenaUbigeo { get; set; }
+
+        public Departamento Departamento { get; set; }
+        public int DepartamentoID { get; set; }
+
+
+        public ICollection<Distrito> Distritos { get; set; }
+
 
         public Provincia()
-            : base() { }
+        {
+            Distritos = new Collection<Distrito>();
 
-
-
+        }
 
     }
 }

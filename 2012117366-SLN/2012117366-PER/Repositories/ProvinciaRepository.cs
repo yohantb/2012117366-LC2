@@ -10,5 +10,17 @@ namespace _2012117366_PER.Repositories
 {
    public  class ProvinciaRepository : Repository<Provincia> , IProvinciaRepository
     {
+        private  readonly TapiaDbContext _Context;
+
+        public ProvinciaRepository(TapiaDbContext _Context)
+        {
+            // TODO: Complete member initialization
+            this._Context = _Context;
+        }
+
+        private ProvinciaRepository()
+        {
+
+        }
     }
 }

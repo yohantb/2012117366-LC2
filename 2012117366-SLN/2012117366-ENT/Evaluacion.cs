@@ -8,85 +8,34 @@ namespace _2012117366_ENT
 {
     public class Evaluacion
     {
+        public int EvaluacionID { get; set; }
 
-        public int evaluacionid { get; set; }
-        public Evaluacion() { }
-
-        public class EquipoCelular
-        {
-            public EquipoCelular _EquipoCelular;
+        public EstadoEvaluacion EstadoEvaluacion { get; set; }
 
 
-            public EquipoCelular(EquipoCelular EquipoCelularid)
-            {
-                _EquipoCelular = EquipoCelularid;
+        public TipoEvaluacion TipoEvaluacion { get; set; }
 
 
-            }
-
-            public EquipoCelular EquipoCelularid { get { return _EquipoCelular; } }
-
-        }
-        public class EstadoEvaluacion
-        {
-            public EstadoEvaluacion _EstadoEvaluacion;
+        public Cliente Cliente { get; set; }
 
 
-            public EstadoEvaluacion(EstadoEvaluacion EstadoEvaluacionid)
-            {
-                _EstadoEvaluacion = EstadoEvaluacionid;
+        public Venta Venta { get; set; }
+        public int VentaID { get; set; }
 
 
-            }
+        public LineaTelefonica LineaTelefonica { get; set; }
 
-            public EstadoEvaluacion EstadoEvaluacionid { get { return _EstadoEvaluacion; } }
+        public EquipoCelular EquipoCelular { get; set; }
 
-        }
-        public class TipoEvaluacion
-        {
-            public TipoEvaluacion _TipoEvaluacion;
+        public Plan Plan { get; set; }
 
-
-            public TipoEvaluacion(TipoEvaluacion tipoevaluacionid)
-            {
-                _TipoEvaluacion = tipoevaluacionid;
+        public Trabajador Trabajador { get; set; }
+        public int TrabajadorID { get; set; }
 
 
-            }
+        public CentroAtencion CentroAtencion { get; set; }
+        public int CentroAtencionID { get; set; }
 
-            public TipoEvaluacion tipoevaluacionid { get { return _TipoEvaluacion; } }
 
-        }
-
-        int _Planid;
-        public int Plan { get { return Planid; } }
-        public int Planid
-        {
-            get
-            {
-                return _Planid;
-            }
-
-            set
-            {
-                _Planid = value;
-            }
-        }
-
-        int _Clienteid;
-        public int Cliente { get { return Clienteid; } }
-
-        public int Clienteid
-        {
-            get
-            {
-                return _Clienteid;
-            }
-
-            set
-            {
-                _Clienteid = value;
-            }
-        }
     }
 }

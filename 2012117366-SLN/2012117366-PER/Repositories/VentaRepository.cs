@@ -8,7 +8,19 @@ using System.Threading.Tasks;
 
 namespace _2012117366_PER.Repositories
 {
-    public class VentaRepository : Repository<Venta> , IVentaRepository
+    class VentaRepository : Repository<Venta>, IVentaRepository
     {
+        private TapiaDbContext _Context;
+
+        public VentaRepository(TapiaDbContext _Context)
+        {
+            // TODO: Complete member initialization
+            this._Context = _Context;
+        }
+
+        private VentaRepository()
+        {
+
+        }
     }
 }

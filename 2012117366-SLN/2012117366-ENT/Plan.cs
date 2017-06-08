@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,26 +9,17 @@ namespace _2012117366_ENT
 {
     public class Plan
     {
-            public int Planid { get; set; }
+        public int PlanID { get; set; }
 
-        public class TipoPlan 
+        public TipoPlan TipoPlan { get; set; }
+
+        public ICollection<Evaluacion> Evaluacion { get; set; }
+        public int EvaluacionID { get; set; }
+
+        public Plan()
         {
-            public TipoPlan _TipoPlan;
-
-
-            public TipoPlan (TipoPlan tipoPlanid)
-            {
-                _TipoPlan = tipoPlanid;
-
-
-            }
-
-            public TipoPlan tipoPlanid { get { return _TipoPlan; } }
-
+            Evaluacion = new Collection<Evaluacion>();
         }
-
-        public Plan() { }
-
 
 
     }

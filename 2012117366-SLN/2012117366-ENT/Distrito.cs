@@ -1,21 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace _2012117366_ENT
 {
-    public class Distrito : Provincia
-    {    public int distritoid { get; set; }
+    public class Distrito
+    {
+        public int DistritoID { get; set; }
+
+        public Provincia Provincia { get; set; }
+        public int ProvinciaID { get; set; }
+
+        public ICollection<Direccion> Direccion { get; set; }
+
+
+        public string CadenaUbigeo { get; set; }
 
         public Distrito()
-            : base() { }
+        {
+            Direccion = new Collection<Direccion>();
 
 
-
-
-
-
+        }
     }
 }

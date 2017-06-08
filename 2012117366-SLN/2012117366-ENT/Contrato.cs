@@ -6,39 +6,20 @@ using System.Threading.Tasks;
 
 namespace _2012117366_ENT
 {
-   public  class Contrato : Venta
+    public class Contrato
     {
-        public int contratoid{ get; set; }
-        public int tiempoContrato { get; set; }
+        public int ContratoID { get; set; }
 
-      
+        public Venta Venta { get; set; }
+        public int VentaID { get; set; }
 
-
-        // 12 meses o 18 meses
-        public static string sidocemeses { get; private set; }
-        public static string Nodocemeses { get; private set; }
-
-        string InfA = sidocemeses;
-        string InfB = Nodocemeses;
-
-        //  Este metodo dira  efectivo o debito 
-
-        public string MetodoContrato(string tiempoContrato)
+        public Contrato()
         {
-            if (tiempoContrato == InfA)
-            {
-                return sidocemeses;
-            }
-            else
-                return Nodocemeses;
+
 
         }
 
-
-
-
-
     }
 
-    
+
 }

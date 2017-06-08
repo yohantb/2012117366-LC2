@@ -10,5 +10,24 @@ namespace _2012117366_PER.Repositories
 {
    public  class EquipoCelularRepository : Repository<EquipoCelular>,IEquipoCelularRepository
     {
+
+        private readonly TapiaDbContext _Context;
+
+        public EquipoCelularRepository(TapiaDbContext _Context)
+        {
+            // TODO: Complete member initialization
+            this._Context = _Context;
+        }
+
+        private EquipoCelularRepository()
+        {
+
+        }
+
+
+
+
+
+
     }
 }

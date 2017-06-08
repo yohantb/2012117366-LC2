@@ -9,18 +9,16 @@ using _2012117366_ENT;
 
 namespace _2012117366_PER.EntityTypeConfigurations
 {
-    
-    
-        public class TipoPagoconfiguration:EntityTypeConfiguration<TipoPago>
-        {
-            public TipoPagoconfiguration()
-            {
-            ToTable("TipoPago");
 
-            HasKey(c => c.tipopagoid);
+
+    public class TipoPagoConfiguration : EntityTypeConfiguration<TipoPago>
+    {
+        public TipoPagoConfiguration()
+        {
+            ToTable("TipoPago");
+            HasKey(a => a.TipoPagoID);
 
         }
-
     }
-    }
+}
 

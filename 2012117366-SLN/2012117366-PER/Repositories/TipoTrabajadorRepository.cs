@@ -10,5 +10,22 @@ namespace _2012117366_PER.Repositories
 {
     public class TipoTrabajadorRepository : Repository<TipoTrabajador> , ITipoTrabajadorRepository
     {
+
+        private readonly TapiaDbContext _Context;
+
+        public TipoTrabajadorRepository(TapiaDbContext _Context)
+        {
+            // TODO: Complete member initialization
+            this._Context = _Context;
+        }
+
+        private TipoTrabajadorRepository()
+        {
+
+        }
+
+
+
+
     }
 }

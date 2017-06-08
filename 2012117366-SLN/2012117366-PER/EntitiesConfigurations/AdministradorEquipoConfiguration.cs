@@ -8,16 +8,13 @@ using System.Threading.Tasks;
 
 namespace _2012117366_PER.EntityTypeConfigurations
 {
-    
 
-        public class UbigeoConfiguration : EntityTypeConfiguration<Ubigeo>
+    public class AdministradorEquipoConfiguration : EntityTypeConfiguration<AdministradorEquipo>
+    {
+        public AdministradorEquipoConfiguration()
         {
-            public UbigeoConfiguration()
-            {
-                ToTable("Ubigeo");
-
-                HasKey(c => c.Ubigeoid);
-
-            }
+            ToTable("AdministradorEquipo");
+            HasKey(a => a.AdministradorEquipoID);
         }
+    }
 }

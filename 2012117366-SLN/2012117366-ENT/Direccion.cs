@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace _2012117366_ENT
 {
-   public class Direccion : CentroAtencion
+    public class Direccion
     {
-        public int direccionid { get; set; }
-
-        public Direccion()
-            : base() { }
+        public int DireccionID { get; set; }
 
 
+        public string CadenaUbigeo { get; set; }
+
+        public CentroAtencion CentroAtencion { get; set; }
+
+        public int CentroAtencionID { get; set; }
+
+        public Distrito Distrito { get; set; }
+        public int DistritoID { get; set; }
     }
 }

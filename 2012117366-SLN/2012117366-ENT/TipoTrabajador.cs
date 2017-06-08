@@ -1,49 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace _2012117366_ENT
 {
-    public class TipoTrabajador : Trabajador
+    public class TipoTrabajador
     {
-        public int tipoTrabajadorid { get; set; }
-        public int Empleado { get; set; }
+        public int TipoTrabajadorID { get; set; }
+
+        public ICollection<Trabajador> Trabajador { get; set; }
+        public int TrabajadorID { get; set; }
+
         public TipoTrabajador()
-            : base() { }
-
-
-
-        public static string Cajero{ get; private set; }
-        public static string Vendedor { get; private set; }
-        public static string Gerente { get; private set; }
-        string InfA = Cajero;
-        string InfB = Vendedor;
-        string InfC = Gerente;
-
-        //  3 opciones de empleado
-        public string TipoEmpleado (string Empleado)
         {
-            if (Empleado == InfA)
-            {
-                return Cajero;
-            }
-            else if(Empleado == InfB)
-            {
-                return Vendedor;
-            }
-            return Gerente;
-
+            Trabajador = new Collection<Trabajador>();
         }
-
-
-
-
-
-
-
-
 
     }
 }

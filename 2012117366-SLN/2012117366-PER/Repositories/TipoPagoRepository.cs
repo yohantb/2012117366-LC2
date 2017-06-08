@@ -10,5 +10,23 @@ namespace _2012117366_PER.Repositories
 {
    public class TipoPagoRepository : Repository<TipoPago>, ITipoPagoRepository
     {
+        private   readonly TapiaDbContext _Context;
+
+        public TipoPagoRepository(TapiaDbContext _Context)
+        {
+            // TODO: Complete member initialization
+            this._Context = _Context;
+        }
+
+        private TipoPagoRepository()
+        {
+
+        }
+
+
+
+
+
+
     }
 }

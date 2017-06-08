@@ -8,15 +8,14 @@ using System.Threading.Tasks;
 
 namespace _2012117366_PER.EntityTypeConfigurations
 {
-    
-        public class PlanConfiguration : EntityTypeConfiguration<Plan>
+
+    public class TipoPlanConfiguration : EntityTypeConfiguration<TipoPlan>
+    {
+        public TipoPlanConfiguration()
         {
-            public PlanConfiguration()
-            {
-                ToTable("Plan");
+            ToTable("TipoPlan");
+            HasKey(a => a.TipoPlanID);
 
-                HasKey(c => c.Planid);
-
-            }
         }
+    }
 }

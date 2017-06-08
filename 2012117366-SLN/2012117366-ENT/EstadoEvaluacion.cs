@@ -1,42 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace _2012117366_ENT
 {
-   public  class EstadoEvaluacion
+    public class EstadoEvaluacion
     {
-        public int EstadoEvaluacionid { get; set; }
+        public int EstadoEvaluacionID { get; set; }
 
-        
-        // Esto es para lo de infocorp  situacion
+        public ICollection<Evaluacion> Evaluacion { get; set; }
+        public int EvaluacionID { get; set; }
 
-        public string Bancaria { get; set; }
-        public static string siApto { get; private set; }
-        public static string NoApto { get; private set; }
-
-        string InfA = siApto;
-        string InfB = NoApto;
-
-        // si se encuentra infocorp o no
-        public string Inforcorp(string Bancaria)
+        public EstadoEvaluacion()
         {
-            if (Bancaria == InfA)
-            {
-                return siApto;
-            }
-            else 
-                return  NoApto;
-
-            }
-
-
-
-
-
-
-
+            Evaluacion = new Collection<Evaluacion>();
         }
     }
+}

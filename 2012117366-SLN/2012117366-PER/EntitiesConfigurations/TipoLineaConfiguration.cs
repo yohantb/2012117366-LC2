@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace _2012117366_PER.EntityTypeConfigurations
 {
-    
-        public class DistritoConfiguration : EntityTypeConfiguration<Distrito>
+
+    public class TipoLineaConfiguration : EntityTypeConfiguration<TipoLinea>
+    {
+        public TipoLineaConfiguration()
         {
-            public DistritoConfiguration()
-            {
-                ToTable("Distrito");
+            ToTable("TipoLinea");
+            HasKey(a => a.TipoLineaID);
 
-                HasKey(c => c.distritoid);
 
-            }
         }
+    }
 }

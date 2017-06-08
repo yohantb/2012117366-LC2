@@ -8,15 +8,14 @@ using System.Threading.Tasks;
 
 namespace _2012117366_PER.EntityTypeConfigurations
 {
-    
-        public class EquipoCelularConfiguration : EntityTypeConfiguration<EquipoCelular>
+    public class TipoEvaluacionConfiguration : EntityTypeConfiguration<TipoEvaluacion>
+    {
+        public TipoEvaluacionConfiguration()
         {
-            public EquipoCelularConfiguration()
-            {
-                ToTable("EquipoCelular");
+            ToTable("TipoEvaluacion");
+            HasKey(a => a.TipoEvaluacionID);
 
-                HasKey(c => c.EquipoCelularid);
-
-            }
         }
+
+    }
 }

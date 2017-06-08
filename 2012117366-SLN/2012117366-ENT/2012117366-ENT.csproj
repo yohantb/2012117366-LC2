@@ -72,7 +72,7 @@
     <Compile Include="IRepositories\ITipoPlanRepository.cs" />
     <Compile Include="IRepositories\ITipoTrabajadorRepository.cs" />
     <Compile Include="IRepositories\ITrabajadorRepository.cs" />
-    <Compile Include="IRepositories\IUbigeoRepository.cs" />
+    <Compile Include="IRepositories\IUnityOfWork.cs" />
     <Compile Include="IRepositories\IVentaRepository.cs" />
     <Compile Include="LineaTelefonica.cs" />
     <Compile Include="Plan.cs" />
@@ -84,7 +84,6 @@
     <Compile Include="TipoPlan.cs" />
     <Compile Include="TipoTrabajador.cs" />
     <Compile Include="Trabajador.cs" />
-    <Compile Include="Ubigeo.cs" />
     <Compile Include="Venta.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

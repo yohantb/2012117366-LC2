@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,35 +9,16 @@ namespace _2012117366_ENT
 {
     public class TipoEvaluacion
     {
-        public int tipoevaluacionid { get; set; }
+        public int TipoEvaluacionID { get; set; }
 
-        // DNI MAYOR DE 18 Ejem todo dni superiror al 70125292 son mayores de 18
-        public int Dni { get; set; }
-
-      // 1 y 2 vendrian ser APTO O NO .
-        public double  MayoriaDeEdad (int Edad) {
-            if(Dni>70125292){
-                return 1;
-            } else {
-                return 2;
-
-            }
-
-         
+        public ICollection<Evaluacion> Evaluacion { get; set; }
+        public int EvaluacionID { get; set; }
 
 
-
-
+        public TipoEvaluacion()
+        {
+            Evaluacion = new Collection<Evaluacion>();
         }
-
-        
-
-
-
-        
-
-   
-
 
 
     }

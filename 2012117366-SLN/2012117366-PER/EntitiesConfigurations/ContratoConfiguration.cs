@@ -8,15 +8,14 @@ using System.Threading.Tasks;
 
 namespace _2012117366_PER.EntityTypeConfigurations
 {
-    
-        public class ClienteConfiguration : EntityTypeConfiguration<Cliente>
+
+    public class ContratoConfiguration : EntityTypeConfiguration<Contrato>
+    {
+        public ContratoConfiguration()
         {
-            public ClienteConfiguration()
-            {
-                ToTable("Cliente");
+            ToTable("Contrato");
+            HasKey(a => a.ContratoID);
 
-                HasKey(c => c.clienteid);
-
-            }
         }
+    }
 }

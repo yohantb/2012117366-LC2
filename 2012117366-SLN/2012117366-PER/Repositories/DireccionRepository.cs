@@ -10,5 +10,22 @@ namespace _2012117366_PER.Repositories
 {
    public  class DireccionRepository: Repository<Direccion>,IDireccionRepository
     {
+
+        private   readonly   TapiaDbContext _Context;
+
+        public DireccionRepository(TapiaDbContext _Context)
+        {
+            // TODO: Complete member initialization
+            this._Context = _Context;
+        }
+
+        private DireccionRepository()
+        {
+
+        }
+
+
+
+
     }
 }

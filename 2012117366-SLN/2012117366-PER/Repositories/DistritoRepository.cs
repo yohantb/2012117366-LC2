@@ -10,5 +10,19 @@ namespace _2012117366_PER.Repositories
 {
     public class DistritoRepository : Repository<Distrito>,IDistritoRepository
     {
+
+        private readonly  TapiaDbContext _Context;
+
+        public DistritoRepository(TapiaDbContext _Context)
+        {
+            // TODO: Complete member initialization
+            this._Context = _Context;
+        }
+
+        private DistritoRepository()
+        {
+
+        }
+
     }
 }

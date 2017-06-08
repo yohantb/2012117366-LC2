@@ -8,73 +8,29 @@ namespace _2012117366_ENT
 {
     public class Venta
     {
-        public int ventaid { get; set; }
-        public Venta() { }
+        public int VentaID { get; set; }
 
+        public Cliente Cliente { get; set; }
 
-        public class TipoPago
+        public TipoPago TipoPago { get; set; }
+
+        public Contrato Contrato { get; set; }
+
+        public Evaluacion Evaluacion { get; set; }
+
+        public LineaTelefonica LineaTelefonica { get; set; }
+
+        public CentroAtencion CentroAtencion { get; set; }
+        public int CentroAtencionID { get; set; }
+
+        public Venta()
         {
-            public TipoPago _TipoPago;
-
-
-            public TipoPago (TipoPago tipoPagoid)
-            {
-                _TipoPago = tipoPagoid;
-
-
-            }
-
-            public TipoPago tipoPagoid { get { return _TipoPago; } }
-
-        }
-
-        public class Contrato
-        {
-            public Contrato _Contrato;
-
-
-            public Contrato(Contrato  contratoid)
-            {
-                _Contrato = contratoid;
-
-
-            }
-
-            public Contrato contratoid { get { return _Contrato; } }
-
-        }
-
-        public class CentroAtencion
-        {
-            public CentroAtencion _CentroAtencion;
-
-
-            public CentroAtencion(CentroAtencion centroatencionid)
-            {
-                _CentroAtencion = centroatencionid;
-
-
-            }
-
-            public CentroAtencion tipoPagoid { get { return _CentroAtencion; } }
 
         }
 
 
-        int _Clienteid;
-        public int Cliente { get { return Clienteid; } }
 
-        public int Clienteid
-        {
-            get
-            {
-                return _Clienteid;
-            }
 
-            set
-            {
-                _Clienteid = value;
-            }
-        }
+
     }
 }

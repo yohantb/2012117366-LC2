@@ -8,15 +8,14 @@ using System.Threading.Tasks;
 
 namespace _2012117366_PER.EntityTypeConfigurations
 {
-    
-        public class ProvinciaConfiguration : EntityTypeConfiguration<Provincia>
+
+    public class ClienteConfiguration : EntityTypeConfiguration<Cliente>
+    {
+        public ClienteConfiguration()
         {
-            public ProvinciaConfiguration()
-            {
-                ToTable("Provincia");
+            ToTable("Cliente");
+            HasKey(a => a.ClienteID);
 
-                HasKey(c => c.Provinciaid);
-
-            }
         }
+    }
 }

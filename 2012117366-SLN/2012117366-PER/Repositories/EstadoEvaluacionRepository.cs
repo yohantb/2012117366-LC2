@@ -10,5 +10,25 @@ namespace _2012117366_PER.Repositories
 {
  public    class EstadoEvaluacionRepository : Repository<EstadoEvaluacion>,IEstadoEvaluacionRepository
     {
+
+        private readonly TapiaDbContext _Context;
+
+        public EstadoEvaluacionRepository(TapiaDbContext _Context)
+        {
+            // TODO: Complete member initialization
+            this._Context = _Context;
+        }
+
+        private EstadoEvaluacionRepository()
+        {
+
+        }
+
+
+
+
+
+
+
     }
 }

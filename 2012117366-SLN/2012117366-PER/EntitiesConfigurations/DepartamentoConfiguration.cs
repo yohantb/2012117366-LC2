@@ -9,14 +9,13 @@ using System.Threading.Tasks;
 namespace _2012117366_PER.EntityTypeConfigurations
 {
     
-        public class DireccionConfiguration : EntityTypeConfiguration<Direccion>
+        public class DepartamentoConfiguration : EntityTypeConfiguration<Departamento>
         {
-            public DireccionConfiguration()
+            public DepartamentoConfiguration()
             {
-                ToTable("Direccion");
-
-                HasKey(c => c.direccionid);
-
+                ToTable("Departamento");
+                HasKey(a => a.DepartamentoID);
             }
         }
-}
+    }
+    

@@ -1,50 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace _2012117366_ENT
 {
-  public   class LineaTelefonica : AdministradorLinea
+    public class LineaTelefonica
     {
-        public int Lineatelfonicaid { get; set; }
-        public string Operadores { get; set; }
+        public int LineaTelefonicaID { get; set; }
+
+        public TipoLinea TipoLinea { get; set; }
+
+        public AdministradorLinea AdministradorLinea { get; set; }
+        public int AdministradorLineaID { get; set; }
+
+        public Venta Venta { get; set; }
+        public int VentaID { get; set; }
+
+        public ICollection<Evaluacion> Evaluacion { get; set; }
+        public int EvaluacionID { get; set; }
+
 
 
         public LineaTelefonica()
-            : base() { }
-
-
-
-
-
-        public static string Movistar { get; private set; }
-        public static string Claro { get; private set; }
-        public static string Entel { get; private set; }
-        string InfA = Movistar;
-        string InfB = Claro;
-        string InfC = Entel;
-
-        //  3 opciones de empleado
-        public string TipoLinOperador(string Operadores)
         {
-            if (Operadores == InfA)
-            {
-                return Movistar;
-            }
-            else if (Operadores == InfB)
-            {
-                return Claro;
-            }
-            return Entel;
-
+            Evaluacion = new Collection<Evaluacion>();
         }
-
-
-
-
-
 
     }
 }

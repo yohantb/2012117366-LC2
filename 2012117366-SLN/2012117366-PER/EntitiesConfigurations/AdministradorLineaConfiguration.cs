@@ -8,15 +8,13 @@ using System.Threading.Tasks;
 
 namespace _2012117366_PER.EntityTypeConfigurations
 {
-     
-      public class TipoLineaConfiguration : EntityTypeConfiguration<TipoLinea>
+
+    public class AdministradorLineaConfiguration : EntityTypeConfiguration<AdministradorLinea>
     {
-        public TipoLineaConfiguration()
+        public AdministradorLineaConfiguration()
         {
-            ToTable("TipoLinea");
-
-            HasKey(c => c.Tipolineaid);
-
+            ToTable("AdministradorLinea");
+            HasKey(a => a.AdministradorLineaID);
         }
     }
 }

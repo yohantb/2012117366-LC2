@@ -9,5 +9,7 @@ namespace _2012117366_PER.IRepositories
 {
    public interface IAdministradorEquipoRepository : IRepository<AdministradorEquipo>
     {
+        IEnumerable<AdministradorEquipo> GetAdministradorEquipoWithEquipoCelular(int pageindex, int pageSize);
+
     }
 }
