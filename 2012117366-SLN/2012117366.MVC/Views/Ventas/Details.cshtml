@@ -1,0 +1,67 @@
+﻿@model _2012117366_ENT.Venta
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Venta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CentroAtencion.CentroAtencionID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CentroAtencion.CentroAtencionID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.ClienteID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.ClienteID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoPago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoPago)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContratoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContratoId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EvaluacionId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EvaluacionId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LineaTelefonicaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LineaTelefonicaId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.VentaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
